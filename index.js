@@ -7,7 +7,7 @@ serversdb.ensureIndex({ fieldName: 'server', unique: true });
 */
 
 
-var WorkflowTarget = require('./lib/WorkflowTarget.js');
+var WorkflowInstance = require('./lib/WorkflowInstance.js');
 var WorkflowTask_Simple = require('./lib/WorkflowTask_Simple.js');
 var WorkflowTask_Reciept = require('./lib/WorkflowTask_Reciept.js');
 var WorkflowChain = require('./lib/WorkflowChain.js');
@@ -39,14 +39,14 @@ var task3 = new WorkflowTask_Simple(
 var engine = new WorkflowEngine();
 var wfList = [task1, task2, task3];
 var chain = new WorkflowChain(wfList);
-var t = new WorkflowTarget("testServer1", chain);
+var t = new WorkflowInstance("testServer1", chain);
 //t._step =true;
 //t.start();
 
 
 /*
 console.log( chain.isValidState("Create Test File") );
-console.log( chain.isValidState("Create Test Fi2le") );
+console.log( chain.isValidState("Create Test File") );
 console.log( chain.getPrevious("Create Test File") );
 console.log( chain.getPrevious("Delete Test File") );
 */
