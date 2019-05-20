@@ -1,14 +1,19 @@
 # Chains - A Workflow Engine / Task Executor
 
+## NOTE - This project is not complete and is not currently available via NPM!
+## NOTE - This documentation is out of date as it does not include the engine logic that is currently  in progress
+
 ## Quick Start
 ### Setup
 npm install chains
 
 const chains = require('chains');
 
-### Make free standing tasks
+### Load any modules needed by your tasks
 
 var fs = require('fs');
+
+### Make free standing tasks
 
 var task1 = new WorkflowTask_Simple(
   "Create Test File",
@@ -33,6 +38,7 @@ var task3 = new WorkflowTask_Simple(
 
 ### Make a task chain that includes these tasks
 var wfChain = new chains.WorkflowChain([task1, task2, task3]);
+
 
 
 
