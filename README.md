@@ -1,4 +1,4 @@
-# Chains - a workflow engine
+# Chains - A Workflow Engine / Task Executor
 
 ## Quick Start
 ### Setup
